@@ -1,26 +1,32 @@
+import { Header } from "@/components/header"
 import { Hero } from "@/components/hero"
-import { GameInfo } from "@/components/game-info"
-import { Features } from "@/components/features"
-import { Downloads } from "@/components/downloads"
-import { Installation } from "@/components/installation"
-import { Screenshots } from "@/components/screenshots"
-import { Storyline } from "@/components/storyline"
-import { Reviews } from "@/components/reviews"
+import { AboutUs } from "@/components/about-us"
+import { Services } from "@/components/services"
+import { Gallery } from "@/components/gallery"
+import { WhyChooseUs } from "@/components/why-choose-us"
+import { Certifications } from "@/components/certifications"
+import { Testimonials } from "@/components/testimonials"
+import { ServiceArea } from "@/components/service-area"
+import { BlogPreview } from "@/components/blog-preview"
 import { FAQ } from "@/components/faq"
+import { CTABanner } from "@/components/cta-banner"
 import { Footer } from "@/components/footer"
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <main className="min-h-screen bg-white">
+      <Header />
       <Hero />
-      <GameInfo />
-      <Features />
-      <Downloads />
-      <Installation />
-      <Screenshots />
-      <Storyline />
-      <Reviews />
+      <AboutUs />
+      <Services />
+      <Gallery />
+      <WhyChooseUs />
+      <Certifications />
+      <Testimonials />
+      <ServiceArea />
+      <BlogPreview />
       <FAQ />
+      <CTABanner />
       <Footer />
     </main>
   )
