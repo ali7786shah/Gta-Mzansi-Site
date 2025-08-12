@@ -1,88 +1,83 @@
 import { Button } from "@/components/ui/button"
-import { Badge } from "@/components/ui/badge"
 import {
-  Download,
   Mail,
   MessageCircle,
-  Github,
-  Twitter,
   Facebook,
   Instagram,
   Youtube,
   Shield,
   Clock,
-  Globe,
+  MapPin,
+  Phone,
+  Calendar,
 } from "lucide-react"
 
 export function Footer() {
   const quickLinks = [
-    { name: "Download APK", href: "#download" },
-    { name: "Installation Guide", href: "#installation" },
-    { name: "System Requirements", href: "#requirements" },
-    { name: "Screenshots", href: "#screenshots" },
+    { name: "Kitchen Design", href: "#services" },
+    { name: "Portfolio Gallery", href: "#gallery" },
+    { name: "About Us", href: "#about" },
+    { name: "Testimonials", href: "#testimonials" },
     { name: "FAQ", href: "#faq" },
   ]
 
-  const gameFiles = [
-    { name: "GTA Mzansi APK + OBB", href: "#apk-obb" },
-    { name: "Kasi Vibes Mod", href: "#kasi-vibes" },
-    { name: "Stereo Hearts Pack", href: "#stereo-hearts" },
-    { name: "Legacy Edition", href: "#legacy" },
-    { name: "PC Version", href: "#pc-version" },
+  const services = [
+    { name: "Custom Cabinets", href: "#services" },
+    { name: "Countertop Installation", href: "#services" },
+    { name: "Kitchen Renovation", href: "#services" },
+    { name: "Lighting & Fixtures", href: "#services" },
+    { name: "Flooring & Tiling", href: "#services" },
   ]
 
   const support = [
-    { name: "Help Center", href: "#help" },
-    { name: "Contact Support", href: "#contact" },
-    { name: "Bug Reports", href: "#bugs" },
-    { name: "Feature Requests", href: "#features" },
-    { name: "Community Forum", href: "#forum" },
+    { name: "Free Consultation", href: "#contact" },
+    { name: "Get Estimate", href: "#contact" },
+    { name: "Project Planning", href: "#services" },
+    { name: "Warranty Info", href: "#warranty" },
+    { name: "Care Instructions", href: "#care" },
   ]
 
   const socialLinks = [
-    { icon: Twitter, href: "#", label: "Twitter" },
     { icon: Facebook, href: "#", label: "Facebook" },
     { icon: Instagram, href: "#", label: "Instagram" },
     { icon: Youtube, href: "#", label: "YouTube" },
-    { icon: Github, href: "#", label: "GitHub" },
-    { icon: MessageCircle, href: "#", label: "Discord" },
   ]
 
   return (
-    <footer className="bg-gradient-to-b from-slate-900 to-black border-t border-slate-800">
-      <div className="container mx-auto px-4 py-16">
+    <footer id="contact" className="bg-navy-900 text-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         {/* Main Footer Content */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           {/* Brand Section */}
           <div className="lg:col-span-1">
             <div className="mb-6">
-              <h3 className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent mb-2">
-                GTA Mzansi APK
+              <h3 className="text-2xl font-bold text-white mb-2">
+                Tacoma Kitchen Pro
               </h3>
-              <p className="text-gray-400 leading-relaxed">
-                Experience the ultimate South African Grand Theft Auto adventure with authentic locations, local
-                culture, and thrilling gameplay.
+              <p className="text-gray-300 leading-relaxed">
+                Transforming kitchens and enhancing homes throughout the Puget Sound region with professional craftsmanship, 
+                beautiful designs, and exceptional customer service.
               </p>
             </div>
 
             <div className="space-y-3 mb-6">
-              <div className="flex items-center gap-2 text-sm text-gray-400">
-                <Shield className="w-4 h-4 text-green-400" />
-                100% Safe & Secure
+              <div className="flex items-center gap-2 text-sm text-gray-300">
+                <Shield className="w-4 h-4 text-yellow-400" />
+                Licensed & Insured
               </div>
-              <div className="flex items-center gap-2 text-sm text-gray-400">
-                <Clock className="w-4 h-4 text-blue-400" />
-                Regular Updates
+              <div className="flex items-center gap-2 text-sm text-gray-300">
+                <Clock className="w-4 h-4 text-yellow-400" />
+                15+ Years Experience
               </div>
-              <div className="flex items-center gap-2 text-sm text-gray-400">
-                <Globe className="w-4 h-4 text-purple-400" />
-                110M+ Downloads
+              <div className="flex items-center gap-2 text-sm text-gray-300">
+                <MapPin className="w-4 h-4 text-yellow-400" />
+                Local Tacoma Company
               </div>
             </div>
 
-            <Button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white">
-              <Download className="w-4 h-4 mr-2" />
-              Download Now
+            <Button className="bg-yellow-500 hover:bg-yellow-600 text-black font-bold">
+              <Phone className="w-4 h-4 mr-2" />
+              Call (253) 555-0123
             </Button>
           </div>
 
@@ -92,7 +87,7 @@ export function Footer() {
             <ul className="space-y-2">
               {quickLinks.map((link, index) => (
                 <li key={index}>
-                  <a href={link.href} className="text-gray-400 hover:text-blue-400 transition-colors duration-200">
+                  <a href={link.href} className="text-gray-300 hover:text-yellow-400 transition-colors duration-200">
                     {link.name}
                   </a>
                 </li>
@@ -100,14 +95,14 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Game Files */}
+          {/* Services */}
           <div>
-            <h4 className="text-lg font-semibold text-white mb-4">Game Files</h4>
+            <h4 className="text-lg font-semibold text-white mb-4">Our Services</h4>
             <ul className="space-y-2">
-              {gameFiles.map((file, index) => (
+              {services.map((service, index) => (
                 <li key={index}>
-                  <a href={file.href} className="text-gray-400 hover:text-purple-400 transition-colors duration-200">
-                    {file.name}
+                  <a href={service.href} className="text-gray-300 hover:text-yellow-400 transition-colors duration-200">
+                    {service.name}
                   </a>
                 </li>
               ))}
@@ -116,11 +111,11 @@ export function Footer() {
 
           {/* Support */}
           <div>
-            <h4 className="text-lg font-semibold text-white mb-4">Support</h4>
+            <h4 className="text-lg font-semibold text-white mb-4">Get Started</h4>
             <ul className="space-y-2 mb-6">
               {support.map((item, index) => (
                 <li key={index}>
-                  <a href={item.href} className="text-gray-400 hover:text-green-400 transition-colors duration-200">
+                  <a href={item.href} className="text-gray-300 hover:text-yellow-400 transition-colors duration-200">
                     {item.name}
                   </a>
                 </li>
@@ -131,29 +126,70 @@ export function Footer() {
               <Button
                 variant="outline"
                 size="sm"
-                className="w-full border-gray-600 text-gray-300 hover:bg-gray-700 bg-transparent"
+                className="w-full border-yellow-500 text-yellow-400 hover:bg-yellow-500 hover:text-black bg-transparent"
               >
                 <Mail className="w-4 h-4 mr-2" />
-                Email Support
+                Email Us
               </Button>
             </div>
           </div>
         </div>
 
+        {/* Contact Information */}
+        <div className="border-t border-gray-700 pt-8 mb-8">
+          <div className="grid md:grid-cols-2 gap-8">
+            <div>
+              <h4 className="text-lg font-semibold text-white mb-4">Contact Information</h4>
+              <div className="space-y-3">
+                <div className="flex items-center gap-3">
+                  <Phone className="w-5 h-5 text-yellow-400" />
+                  <span className="text-gray-300">(253) 555-0123</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <Mail className="w-5 h-5 text-yellow-400" />
+                  <span className="text-gray-300">info@tacomakitchenpro.com</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <MapPin className="w-5 h-5 text-yellow-400" />
+                  <span className="text-gray-300">Tacoma, WA 98402</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <Clock className="w-5 h-5 text-yellow-400" />
+                  <span className="text-gray-300">Mon-Fri: 8AM-6PM, Sat: 9AM-4PM</span>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <h4 className="text-lg font-semibold text-white mb-4">Service Areas</h4>
+              <div className="grid grid-cols-2 gap-2 text-sm text-gray-300">
+                <div>• Tacoma</div>
+                <div>• Puyallup</div>
+                <div>• Lakewood</div>
+                <div>• Federal Way</div>
+                <div>• Auburn</div>
+                <div>• Kent</div>
+                <div>• Gig Harbor</div>
+                <div>• University Place</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
         {/* Social Links */}
-        <div className="border-t border-slate-800 pt-8 mb-8">
+        <div className="border-t border-gray-700 pt-8 mb-8">
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
             <div>
-              <h4 className="text-lg font-semibold text-white mb-3">Follow Us</h4>
+              <h4 className="text-lg font-semibold text-white mb-3">Follow Our Work</h4>
               <div className="flex gap-3">
                 {socialLinks.map((social, index) => (
                   <a
                     key={index}
                     href={social.href}
-                    className="p-2 bg-slate-800 hover:bg-slate-700 rounded-lg transition-colors duration-200"
+                    className="p-2 bg-gray-800 hover:bg-yellow-500 rounded-lg transition-colors duration-200"
                     aria-label={social.label}
                   >
-                    <social.icon className="w-5 h-5 text-gray-400 hover:text-white" />
+                    <social.icon className="w-5 h-5 text-gray-300 hover:text-black" />
                   </a>
                 ))}
               </div>
@@ -161,43 +197,61 @@ export function Footer() {
 
             <div className="text-center md:text-right">
               <div className="flex flex-wrap gap-2 justify-center md:justify-end mb-3">
-                <Badge className="bg-green-500/20 text-green-400 border-green-500/30">Latest Version 4.0.7</Badge>
-                <Badge className="bg-blue-500/20 text-blue-400 border-blue-500/30">Android 5.0+</Badge>
-                <Badge className="bg-purple-500/20 text-purple-400 border-purple-500/30">Free Download</Badge>
+                <span className="bg-yellow-500/20 text-yellow-400 border border-yellow-500/30 px-3 py-1 rounded-full text-sm">
+                  BBB A+ Rated
+                </span>
+                <span className="bg-yellow-500/20 text-yellow-400 border border-yellow-500/30 px-3 py-1 rounded-full text-sm">
+                  NKBA Member
+                </span>
+                <span className="bg-yellow-500/20 text-yellow-400 border border-yellow-500/30 px-3 py-1 rounded-full text-sm">
+                  Licensed & Insured
+                </span>
               </div>
-              <p className="text-gray-400 text-sm">Updated November 2024</p>
+              <p className="text-gray-400 text-sm">Serving Tacoma since 2009</p>
             </div>
           </div>
         </div>
 
         {/* Bottom Footer */}
-        <div className="border-t border-slate-800 pt-8">
+        <div className="border-t border-gray-700 pt-8">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-gray-400">
             <div className="flex flex-wrap gap-4">
-              <span>© 2024 GTA Mzansi APK. All rights reserved.</span>
-              <a href="#privacy" className="hover:text-white transition-colors">
+              <span>© 2024 Tacoma Kitchen Pro. All rights reserved.</span>
+              <a href="#privacy" className="hover:text-yellow-400 transition-colors">
                 Privacy Policy
               </a>
-              <a href="#terms" className="hover:text-white transition-colors">
+              <a href="#terms" className="hover:text-yellow-400 transition-colors">
                 Terms of Service
               </a>
-              <a href="#disclaimer" className="hover:text-white transition-colors">
-                Disclaimer
+              <a href="#sitemap" className="hover:text-yellow-400 transition-colors">
+                Sitemap
               </a>
             </div>
 
             <div className="text-center md:text-right">
-              <p>Made with ❤️ for South African GTA fans</p>
+              <p>Transforming kitchens, enhancing homes in Tacoma</p>
             </div>
           </div>
         </div>
 
-        {/* Disclaimer */}
-        <div className="mt-8 p-4 bg-yellow-900/20 border border-yellow-500/20 rounded-lg">
-          <p className="text-yellow-400 text-sm text-center">
-            <strong>Disclaimer:</strong> GTA Mzansi is a fan-made modification. This website is not affiliated with
-            Rockstar Games. Grand Theft Auto and GTA are trademarks of Take-Two Interactive Software Inc.
+        {/* CTA Banner */}
+        <div className="mt-8 p-6 bg-yellow-500 rounded-lg text-center">
+          <h3 className="text-xl font-bold text-black mb-2">
+            Ready to Transform Your Kitchen?
+          </h3>
+          <p className="text-black/80 mb-4">
+            Get your free consultation and estimate today!
           </p>
+          <div className="flex flex-col sm:flex-row gap-3 justify-center">
+            <Button className="bg-navy-900 hover:bg-navy-800 text-white font-bold">
+              <Calendar className="w-4 h-4 mr-2" />
+              Schedule Free Consultation
+            </Button>
+            <Button variant="outline" className="border-navy-900 text-navy-900 hover:bg-navy-900 hover:text-white">
+              <Phone className="w-4 h-4 mr-2" />
+              Call Now
+            </Button>
+          </div>
         </div>
       </div>
     </footer>

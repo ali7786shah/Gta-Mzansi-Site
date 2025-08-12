@@ -1,92 +1,86 @@
 import { Card, CardContent } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
-import { HelpCircle, Download, Smartphone, Wifi, RefreshCw, Users, Shield, Settings } from "lucide-react"
+import { HelpCircle, Clock, DollarSign, Calendar, Shield, Users, Phone, MessageCircle } from "lucide-react"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 
 export function FAQ() {
   const faqs = [
     {
-      question: "Is GTA Mzansi free to download?",
-      answer:
-        "Yes, GTA Mzansi APK is completely free to download and play. There are no hidden costs or subscription fees. You can enjoy all features without any payment.",
-      icon: Download,
+      question: "How long does a kitchen remodel take?",
+      answer: "A typical kitchen remodel takes 6-10 weeks from start to finish, depending on the scope of work. Small updates like cabinet refacing may take 2-3 weeks, while full renovations can take 8-12 weeks. We'll provide a detailed timeline during your consultation.",
+      icon: Clock,
     },
     {
-      question: "Can I play GTA Mzansi on iOS?",
-      answer:
-        "Currently, GTA Mzansi is only available for Android devices. iOS support is being considered for future releases. Make sure your Android device runs version 5.0 or higher.",
-      icon: Smartphone,
+      question: "Do you offer free consultations?",
+      answer: "Yes! We offer completely free, no-obligation consultations. Our expert team will visit your home, discuss your vision, provide design recommendations, and give you a detailed estimate. There's no pressure to commit - we're here to help you make informed decisions.",
+      icon: Calendar,
     },
     {
-      question: "Do I need an internet connection to play?",
-      answer:
-        "No, GTA Mzansi features offline mode, allowing you to play without an internet connection. However, multiplayer features and online content require a stable internet connection.",
-      icon: Wifi,
+      question: "What's the average cost of a kitchen remodel?",
+      answer: "Kitchen remodel costs vary widely based on size, materials, and scope. Minor updates typically range from $15,000-$30,000, mid-range remodels from $30,000-$60,000, and luxury renovations from $60,000+. We provide transparent, detailed quotes with no hidden fees.",
+      icon: DollarSign,
     },
     {
-      question: "How do I update to the latest version?",
-      answer:
-        "Download the latest GTA Mzansi APK from our official website. Uninstall the old version and install the new one. Your game progress will be saved automatically.",
-      icon: RefreshCw,
-    },
-    {
-      question: "Is multiplayer mode available?",
-      answer:
-        "Yes, GTA Mzansi supports online multiplayer mode and roleplay servers. Join Mzansi GTA RP Discord servers to connect with other players and participate in community events.",
-      icon: Users,
-    },
-    {
-      question: "Is the game safe to install?",
-      answer:
-        "GTA Mzansi APK is completely safe and secure. All files are scanned for viruses and malware. We provide regular security updates and anti-ban protection.",
+      question: "Are you licensed and insured?",
+      answer: "Absolutely! We are fully licensed contractors with comprehensive general liability insurance and workers compensation coverage. We're also bonded and accredited by the Better Business Bureau. Your project and home are fully protected.",
       icon: Shield,
     },
     {
-      question: "What are the system requirements?",
-      answer:
-        "Android 5.0+, 4GB RAM (8GB recommended), 25GB free storage, and OpenGL ES 3.0 support. For optimal performance, use Android 9+ with good ROM capacity.",
-      icon: Settings,
+      question: "Do you handle permits and inspections?",
+      answer: "Yes, we handle all necessary permits and coordinate with local building inspectors. Our team is familiar with Tacoma and surrounding area building codes and will ensure your project meets all requirements and passes inspections.",
+      icon: Shield,
     },
     {
-      question: "How large is the download file?",
-      answer:
-        "The complete GTA Mzansi package ranges from 512MB to 25GB depending on the version and additional content you choose to download. OBB files are included.",
-      icon: Download,
+      question: "What materials do you recommend?",
+      answer: "We recommend premium materials that offer the best balance of beauty, durability, and value. This includes solid wood cabinets, quartz or granite countertops, hardwood or tile flooring, and energy-efficient appliances. We'll help you choose based on your style and budget.",
+      icon: Shield,
+    },
+    {
+      question: "Can you work with my existing appliances?",
+      answer: "Yes, we can integrate your existing appliances into the new design, or help you select new ones. We work with all major appliance brands and can provide recommendations for the best value and performance within your budget.",
+      icon: Shield,
+    },
+    {
+      question: "Do you offer financing options?",
+      answer: "Yes, we offer flexible financing solutions to make your dream kitchen affordable. We partner with trusted lenders to provide competitive rates and terms. Many of our customers choose 0% interest options for qualified purchases.",
+      icon: DollarSign,
     },
   ]
 
   const quickHelp = [
     {
-      title: "Installation Issues",
-      description: "Having trouble installing? Check our detailed installation guide",
-      action: "View Guide",
+      title: "Free Consultation",
+      description: "Schedule your free in-home consultation and get expert advice",
+      action: "Book Now",
+      icon: Calendar,
     },
     {
-      title: "Gameplay Help",
-      description: "Need help with controls or missions? Access our gameplay tips",
-      action: "Get Help",
+      title: "Get an Estimate",
+      description: "Receive a detailed, no-obligation estimate for your project",
+      action: "Get Quote",
+      icon: DollarSign,
     },
     {
-      title: "Technical Support",
-      description: "Experiencing bugs or performance issues? Contact our support team",
-      action: "Contact Support",
+      title: "View Our Work",
+      description: "Browse our portfolio of completed kitchen transformations",
+      action: "View Gallery",
+      icon: Users,
     },
   ]
 
   return (
-    <section className="py-20 bg-gradient-to-b from-slate-800/50 to-slate-900/50">
-      <div className="container mx-auto px-4">
+    <section className="py-20 bg-gray-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <Badge className="mb-4 bg-blue-500/20 text-blue-400 border-blue-500/30">
-            <HelpCircle className="w-3 h-3 mr-1" />
-            Help Center
-          </Badge>
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+          <div className="inline-flex items-center gap-2 bg-yellow-100 text-yellow-800 px-4 py-2 rounded-full mb-4">
+            <HelpCircle className="w-4 h-4" />
+            <span className="text-sm font-medium">Help Center</span>
+          </div>
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-navy-900">
             Frequently Asked Questions
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Find answers to common questions about GTA Mzansi APK download, installation, and gameplay
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Get answers to common questions about kitchen remodeling, our process, and what to expect
           </p>
         </div>
 
@@ -96,17 +90,17 @@ export function FAQ() {
             <Accordion type="single" collapsible className="space-y-4">
               {faqs.map((faq, index) => (
                 <AccordionItem key={index} value={`item-${index}`} className="border-0">
-                  <Card className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 border-slate-700/50 hover:border-blue-500/30 transition-all duration-300">
+                  <Card className="bg-white border border-gray-200 hover:border-yellow-300 transition-all duration-300 shadow-md hover:shadow-lg">
                     <AccordionTrigger className="px-6 py-4 hover:no-underline">
                       <div className="flex items-center gap-3 text-left">
-                        <div className="p-2 bg-blue-500/20 rounded-lg">
-                          <faq.icon className="w-5 h-5 text-blue-400" />
+                        <div className="p-2 bg-yellow-100 rounded-lg">
+                          <faq.icon className="w-5 h-5 text-yellow-600" />
                         </div>
-                        <span className="text-white font-semibold">{faq.question}</span>
+                        <span className="text-navy-900 font-semibold">{faq.question}</span>
                       </div>
                     </AccordionTrigger>
                     <AccordionContent className="px-6 pb-4">
-                      <p className="text-gray-300 leading-relaxed ml-11">{faq.answer}</p>
+                      <p className="text-gray-600 leading-relaxed ml-11">{faq.answer}</p>
                     </AccordionContent>
                   </Card>
                 </AccordionItem>
@@ -116,18 +110,22 @@ export function FAQ() {
 
           {/* Quick Help Sidebar */}
           <div className="space-y-6">
-            <Card className="bg-gradient-to-br from-purple-900/30 to-blue-900/30 border-purple-500/20">
+            <Card className="bg-white border border-gray-200 shadow-md">
               <CardContent className="p-6">
-                <h3 className="text-xl font-bold text-white mb-4">Quick Help</h3>
+                <h3 className="text-xl font-bold text-navy-900 mb-4">Quick Help</h3>
                 <div className="space-y-4">
                   {quickHelp.map((help, index) => (
-                    <div key={index} className="p-4 bg-white/5 rounded-lg">
-                      <h4 className="font-semibold text-white mb-2">{help.title}</h4>
-                      <p className="text-gray-300 text-sm mb-3">{help.description}</p>
+                    <div key={index} className="p-4 bg-gray-50 rounded-lg">
+                      <div className="flex items-center gap-3 mb-3">
+                        <div className="w-8 h-8 bg-yellow-100 rounded-full flex items-center justify-center">
+                          <help.icon className="w-4 h-4 text-yellow-600" />
+                        </div>
+                        <h4 className="font-semibold text-navy-900">{help.title}</h4>
+                      </div>
+                      <p className="text-gray-600 text-sm mb-3">{help.description}</p>
                       <Button
                         size="sm"
-                        variant="outline"
-                        className="border-purple-500/30 text-purple-400 hover:bg-purple-500/10 bg-transparent"
+                        className="bg-yellow-500 hover:bg-yellow-600 text-black font-medium"
                       >
                         {help.action}
                       </Button>
@@ -138,34 +136,40 @@ export function FAQ() {
             </Card>
 
             {/* Contact Support */}
-            <Card className="bg-gradient-to-br from-green-900/30 to-emerald-900/30 border-green-500/20">
+            <Card className="bg-navy-900 text-white border-0 shadow-lg">
               <CardContent className="p-6 text-center">
-                <div className="w-12 h-12 mx-auto mb-4 bg-green-500/20 rounded-lg flex items-center justify-center">
-                  <HelpCircle className="w-6 h-6 text-green-400" />
+                <div className="w-12 h-12 mx-auto mb-4 bg-yellow-500 rounded-lg flex items-center justify-center">
+                  <HelpCircle className="w-6 h-6 text-black" />
                 </div>
-                <h3 className="text-lg font-bold text-white mb-2">Still Need Help?</h3>
+                <h3 className="text-lg font-bold mb-2">Still Have Questions?</h3>
                 <p className="text-gray-300 text-sm mb-4">
-                  Can't find what you're looking for? Our support team is here to help 24/7.
+                  Our expert team is here to help. Contact us for personalized assistance.
                 </p>
-                <Button className="bg-green-600 hover:bg-green-700 text-white w-full">Contact Support</Button>
+                <div className="space-y-3">
+                  <Button className="bg-yellow-500 hover:bg-yellow-600 text-black w-full">
+                    <Phone className="w-4 h-4 mr-2" />
+                    Call Us
+                  </Button>
+                  <Button variant="outline" className="border-white text-white hover:bg-white hover:text-navy-900 w-full">
+                    <MessageCircle className="w-4 h-4 mr-2" />
+                    Send Message
+                  </Button>
+                </div>
               </CardContent>
             </Card>
 
-            {/* Community */}
-            <Card className="bg-gradient-to-br from-orange-900/30 to-red-900/30 border-orange-500/20">
+            {/* Free Consultation CTA */}
+            <Card className="bg-yellow-50 border border-yellow-200">
               <CardContent className="p-6 text-center">
-                <div className="w-12 h-12 mx-auto mb-4 bg-orange-500/20 rounded-lg flex items-center justify-center">
-                  <Users className="w-6 h-6 text-orange-400" />
+                <div className="w-12 h-12 mx-auto mb-4 bg-yellow-500 rounded-lg flex items-center justify-center">
+                  <Calendar className="w-6 h-6 text-black" />
                 </div>
-                <h3 className="text-lg font-bold text-white mb-2">Join Community</h3>
-                <p className="text-gray-300 text-sm mb-4">
-                  Connect with other players, share tips, and get help from the community.
+                <h3 className="text-lg font-bold text-navy-900 mb-2">Free Consultation</h3>
+                <p className="text-gray-600 text-sm mb-4">
+                  Ready to start your kitchen transformation? Book your free consultation today!
                 </p>
-                <Button
-                  variant="outline"
-                  className="border-orange-500/30 text-orange-400 hover:bg-orange-500/10 w-full bg-transparent"
-                >
-                  Join Discord
+                <Button className="bg-yellow-500 hover:bg-yellow-600 text-black w-full font-bold">
+                  Schedule Now
                 </Button>
               </CardContent>
             </Card>

@@ -1,134 +1,87 @@
+"use client"
+
 import { Button } from "@/components/ui/button"
-import { Badge } from "@/components/ui/badge"
-import { Download, Play, Star, Users, Shield, Gamepad2 } from "lucide-react"
-import Image from "next/image"
+import { Star, Shield, Award } from "lucide-react"
 
 export function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Effects */}
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 via-purple-900/30 to-pink-900/20" />
-      <div className="absolute inset-0 bg-[url('/placeholder.svg?height=1080&width=1920')] bg-cover bg-center opacity-10" />
+    <section id="home" className="relative min-h-screen flex items-center justify-center">
+      {/* Background Image */}
+      <div className="absolute inset-0 z-0">
+        <div className="w-full h-full bg-gradient-to-r from-black/60 to-black/40">
+          <img
+            src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+            alt="Beautiful modern kitchen"
+            className="w-full h-full object-cover mix-blend-multiply"
+          />
+        </div>
+      </div>
 
-      <div className="container mx-auto px-4 py-20 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Left Content */}
-          <div className="text-center lg:text-left space-y-8">
-            <div className="space-y-4">
-              <div className="flex flex-wrap gap-2 justify-center lg:justify-start">
-                <Badge variant="secondary" className="bg-green-500/20 text-green-400 border-green-500/30">
-                  <Shield className="w-3 h-3 mr-1" />
-                  Latest Version
-                </Badge>
-                <Badge variant="secondary" className="bg-blue-500/20 text-blue-400 border-blue-500/30">
-                  <Users className="w-3 h-3 mr-1" />
-                  Anti-Ban Version
-                </Badge>
-                <Badge variant="secondary" className="bg-purple-500/20 text-purple-400 border-purple-500/30">
-                  <Gamepad2 className="w-3 h-3 mr-1" />
-                  Multiplayer Mode
-                </Badge>
-              </div>
+      {/* Content */}
+      <div className="relative z-10 text-center text-white max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Main Headline */}
+        <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
+          Your Dream Kitchen Starts Here in Tacoma
+        </h1>
 
-              <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent leading-tight">
-                GTA Mzansi APK
-              </h1>
+        {/* Subheadline */}
+        <p className="text-xl md:text-2xl mb-8 text-gray-200 max-w-3xl mx-auto">
+          Beautiful Designs. Professional Craftsmanship. Local Experts You Can Trust.
+        </p>
 
-              <p className="text-xl md:text-2xl text-gray-300 max-w-2xl">
-                Experience the ultimate South African Grand Theft Auto adventure with stunning graphics, authentic
-                locations, and thrilling gameplay
-              </p>
+        {/* CTA Buttons */}
+        <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+          <Button size="lg" className="bg-yellow-500 hover:bg-yellow-600 text-black font-bold text-lg px-8 py-4">
+            Request Free Estimate
+          </Button>
+          <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-black font-bold text-lg px-8 py-4">
+            View Gallery
+          </Button>
+        </div>
+
+        {/* Trust Badges */}
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-8 text-sm">
+          <div className="flex items-center gap-2">
+            <div className="flex">
+              {[...Array(5)].map((_, i) => (
+                <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+              ))}
             </div>
-
-            {/* Stats */}
-            <div className="grid grid-cols-3 gap-4 py-6">
-              <div className="text-center">
-                <div className="text-2xl md:text-3xl font-bold text-blue-400">110M+</div>
-                <div className="text-sm text-gray-400">Downloads</div>
-              </div>
-              <div className="text-center">
-                <div className="text-2xl md:text-3xl font-bold text-purple-400">542K+</div>
-                <div className="text-sm text-gray-400">Reviews</div>
-              </div>
-              <div className="text-center">
-                <div className="flex items-center justify-center gap-1">
-                  <Star className="w-5 h-5 fill-yellow-400 text-yellow-400" />
-                  <span className="text-2xl md:text-3xl font-bold text-yellow-400">4.8</span>
-                </div>
-                <div className="text-sm text-gray-400">Rating</div>
-              </div>
-            </div>
-
-            {/* Download Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <Button
-                size="lg"
-                className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 text-lg"
-              >
-                <Download className="w-5 h-5 mr-2" />
-                Download APK (25GB)
-              </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="border-purple-500 text-purple-400 hover:bg-purple-500/10 px-8 py-4 text-lg bg-transparent"
-              >
-                <Play className="w-5 h-5 mr-2" />
-                Watch Trailer
-              </Button>
-            </div>
-
-            {/* Quick Info */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 pt-6 text-sm">
-              <div>
-                <div className="text-gray-400">Version</div>
-                <div className="text-white font-semibold">4.0.7</div>
-              </div>
-              <div>
-                <div className="text-gray-400">Size</div>
-                <div className="text-white font-semibold">512MB-25GB</div>
-              </div>
-              <div>
-                <div className="text-gray-400">Android</div>
-                <div className="text-white font-semibold">5.0+</div>
-              </div>
-              <div>
-                <div className="text-gray-400">Updated</div>
-                <div className="text-white font-semibold">Nov 2024</div>
-              </div>
-            </div>
+            <span>4.9 Google Reviews</span>
           </div>
-
-          {/* Right Content - Game Preview */}
-          <div className="relative">
-            <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-              <Image
-                src="/placeholder.svg?height=600&width=400"
-                alt="GTA Mzansi Game Screenshot"
-                width={400}
-                height={600}
-                className="w-full h-auto"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
-              <div className="absolute bottom-4 left-4 right-4">
-                <div className="bg-black/70 backdrop-blur-sm rounded-lg p-4">
-                  <h3 className="text-white font-semibold mb-2">Now Playing: GTA Mzansi</h3>
-                  <div className="flex items-center gap-2 text-sm text-gray-300">
-                    <div className="w-2 h-2 bg-red-500 rounded-full animate-pulse"></div>
-                    Live in South Africa
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Floating Elements */}
-            <div className="absolute -top-4 -right-4 bg-green-500 text-white px-3 py-1 rounded-full text-sm font-semibold animate-bounce">
-              Free Download
-            </div>
-            <div className="absolute -bottom-4 -left-4 bg-purple-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
-              60 FPS Gaming
-            </div>
+          <div className="flex items-center gap-2">
+            <Award className="w-4 h-4 text-yellow-400" />
+            <span>15+ Years in Business</span>
           </div>
+          <div className="flex items-center gap-2">
+            <Shield className="w-4 h-4 text-yellow-400" />
+            <span>Licensed & Insured</span>
+          </div>
+        </div>
+
+        {/* Horizontal Tag Menu */}
+        <div className="flex flex-wrap justify-center gap-3">
+          {[
+            "Kitchen Renovation",
+            "Cabinets",
+            "Islands",
+            "Countertops",
+            "Tile Backsplashes"
+          ].map((tag) => (
+            <span
+              key={tag}
+              className="px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-sm font-medium hover:bg-white/30 transition-colors cursor-pointer"
+            >
+              {tag}
+            </span>
+          ))}
+        </div>
+      </div>
+
+      {/* Scroll Indicator */}
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10">
+        <div className="w-6 h-10 border-2 border-white rounded-full flex justify-center">
+          <div className="w-1 h-3 bg-white rounded-full mt-2 animate-bounce"></div>
         </div>
       </div>
     </section>
