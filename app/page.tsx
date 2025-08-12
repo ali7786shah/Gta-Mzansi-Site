@@ -1,27 +1,35 @@
-import { Hero } from "@/components/hero"
-import { GameInfo } from "@/components/game-info"
-import { Features } from "@/components/features"
-import { Downloads } from "@/components/downloads"
-import { Installation } from "@/components/installation"
-import { Screenshots } from "@/components/screenshots"
-import { Storyline } from "@/components/storyline"
-import { Reviews } from "@/components/reviews"
-import { FAQ } from "@/components/faq"
-import { Footer } from "@/components/footer"
+import { SiteHeader } from "@/components/site/Header"
+import { HeroKitchen } from "@/components/site/HeroKitchen"
+import { AboutUs } from "@/components/site/AboutUs"
+import { Services } from "@/components/site/Services"
+import { BeforeAfterGallery } from "@/components/site/BeforeAfter"
+import { WhyChooseUs } from "@/components/site/WhyChooseUs"
+import { Certifications } from "@/components/site/Certifications"
+import { Testimonials } from "@/components/site/Testimonials"
+import { ServiceArea } from "@/components/site/ServiceArea"
+import { BlogPreview } from "@/components/site/BlogPreview"
+import { FAQKitchen } from "@/components/site/FAQKitchen"
+import { CTABanner } from "@/components/site/CTABanner"
+import { SiteFooter } from "@/components/site/SiteFooter"
+import { ContactSection } from "@/components/site/ContactSection"
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Hero />
-      <GameInfo />
-      <Features />
-      <Downloads />
-      <Installation />
-      <Screenshots />
-      <Storyline />
-      <Reviews />
-      <FAQ />
-      <Footer />
+    <main className="min-h-screen bg-white">
+      <SiteHeader />
+      <HeroKitchen />
+      <AboutUs />
+      <Services />
+      <BeforeAfterGallery />
+      <WhyChooseUs />
+      <Certifications />
+      <Testimonials />
+      <ServiceArea />
+      <BlogPreview />
+      <FAQKitchen />
+      <ContactSection />
+      <CTABanner />
+      <SiteFooter />
     </main>
   )
 }
